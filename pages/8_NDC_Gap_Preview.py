@@ -1,7 +1,7 @@
 """
 Page 8: NDC Gap Preview
 CarbonLens: AI-based Carbon Emission Analysis and Forecasting
-Preliminary Paris Agreement NDC Target Gap Quantification (Preview for Phase 2).
+Paris Agreement NDC Target Gap Quantification and Scenario Framework.
 """
 
 import streamlit as st
@@ -40,26 +40,26 @@ card_title = "#F8FAFC" if dark else "#0F172A"
 card_text = "#CBD5E1" if dark else "#475569"
 
 # ==============================================================================
-# PROMINENT PHASE 2 PREVIEW NOTICE
+# POLICY SIMULATION FRAMEWORK NOTICE
 # ==============================================================================
 st.markdown(f"""
 <div style="background-color: {notice_bg}; border: 1px solid {notice_border}; border-left: 6px solid #8B5CF6; padding: 18px 22px; border-radius: 8px; margin-bottom: 24px;">
     <div style="display: flex; align-items: center; justify-content: space-between;">
         <div style="display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 26px;">🔮</span>
+            <span style="font-size: 26px;">🎯</span>
             <div>
                 <h3 style="margin: 0; color: {notice_title}; font-size: 17px; letter-spacing: 0.3px;">
-                    Preview: Full Scenario Analysis Comes in Phase 2
+                    Policy Simulation & Target Analysis Framework
                 </h3>
                 <p style="margin: 4px 0 0 0; font-size: 13px; color: {notice_text}; line-height: 1.45;">
-                    Phase 1 establishes the baseline trajectory extrapolation and target gap mathematical formula. 
-                    In <strong>Phase 2 (Months 4–6)</strong>, this will expand into an interactive simulation engine incorporating 
-                    deep learning (Informer/PatchTST), SHAP driver attribution, carbon pricing levers, and renewable adoption trajectories.
+                    CarbonLens establishes baseline trajectory extrapolation and target gap quantification, 
+                    laying the groundwork for multi-scenario simulation with explainable SHAP driver attribution, 
+                    carbon tax sensitivity, and renewable penetration pathways.
                 </p>
             </div>
         </div>
         <span style="background: {notice_badge_bg}; color: {notice_badge_fg}; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px; border: 1px solid #8B5CF6; white-space: nowrap;">
-            PHASE 2 ROADMAP
+            POLICY FRAMEWORK
         </span>
     </div>
 </div>
@@ -266,13 +266,13 @@ render_chart_caption(
 )
 
 # ==============================================================================
-# PHASE 2 ROADMAP EXPANSION SUMMARY
+# FUTURE SCOPE & SCENARIO EXPANSION
 # ==============================================================================
-st.markdown('<div class="section-header">🗺️ How This Connects to Phase 2 Deliverables</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🗺️ Future Scope: Advanced Scenario Simulation & Policy Levers</div>', unsafe_allow_html=True)
 
 st.markdown(r"""
-In the upcoming Phase 2, this preliminary gap calculation will be upgraded with:
-1. **Multi-Scenario Simulation**: Introducing interactive policy knobs (e.g. accelerating solar/wind adoption to 50%, imposing a $50/ton carbon tax, or implementing transport EV subsidies).
+This target gap quantification framework is designed to integrate advanced policy modeling extensions:
+1. **Multi-Scenario Simulation**: Introducing interactive policy knobs (e.g. accelerating solar/wind adoption to 50%, imposing a \$50/ton carbon tax, or implementing transport EV subsidies).
 2. **SHAP Feature Attribution**: Explaining *which specific macroeconomic drivers* are responsible for widening or narrowing the gap.
 3. **Probability Bands**: Monte Carlo and conformal prediction bounds around the 2030 forecast to assess the risk of missing national Paris Agreement pledges.
 """)

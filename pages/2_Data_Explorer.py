@@ -223,7 +223,7 @@ if is_daily:
     st.plotly_chart(fig_sector, use_container_width=True)
     render_chart_caption(
         f"Stacked area visualization showing cumulative emissions across four key economic sectors in {selected_region}. "
-        "Notice the heavy baseline weight of thermal power and industrial manufacturing, and how transport experienced the sharpest dip during lockdown phases."
+        "Notice the heavy baseline weight of thermal power and industrial manufacturing, and how transport experienced the sharpest dip during lockdown periods."
     )
 
     # --------------------------------------------------------------------------

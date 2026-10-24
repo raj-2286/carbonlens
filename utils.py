@@ -347,7 +347,7 @@ def render_prototype_banner():
                     PROTOTYPE: sample data for demonstration, not real results
                 </strong>
                 <div style="color: {subtitle_color}; font-size: 12.5px; margin-top: 2px;">
-                    Source Directory: <code>{mode_text}</code> &bull; Config: <code>config.py &rarr; DATA_MODE = "{config.DATA_MODE}"</code> &bull; Prepared for B.Tech Phase 1 guide review.
+                    Source Directory: <code>{mode_text}</code> &bull; Config: <code>config.py &rarr; DATA_MODE = "{config.DATA_MODE}"</code> &bull; Prepared for B.Tech Major Project guide review.
                 </div>
             </div>
         </div>

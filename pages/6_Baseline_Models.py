@@ -28,7 +28,7 @@ render_prototype_banner()
 
 st.markdown("## 🤖 Baseline Model Performance Benchmark")
 st.markdown(
-    "Phase 1 establishes a rigorous benchmark across **8 baseline models** spanning classical econometrics "
+    "CarbonLens establishes a rigorous benchmark across **8 baseline models** spanning classical econometrics "
     "(*ARIMA, SARIMA*), kernel methods (*SVR*), tree ensembles (*Random Forest, Gradient Boosting, XGBoost*), "
     "and meta-ensembles (*Voting, Bagging*)."
 )
@@ -125,7 +125,7 @@ with col_best2:
             • <strong>Ensemble Boost:</strong> <code>{best_row['model']}</code> outperforms classical <code>ARIMA</code> by 
             <strong>{abs(arima_row['MAPE'] - best_row['MAPE']):.1f}% MAPE reduction</strong> in {region_filter}.<br>
             • <strong>Speed vs Precision:</strong> <code>XGBoost</code> trains in <strong>{xgb_row['training_time_sec']:.1f}s</strong> while delivering competitive <strong>R² = {xgb_row['R2']:.3f}</strong>.<br>
-            • <strong>Phase 1 Conclusion:</strong> Non-linear ML models reliably capture holiday and multi-lag dynamics where linear autoregression degrades.
+            • <strong>Benchmark Conclusion:</strong> Non-linear ML models reliably capture holiday and multi-lag dynamics where linear autoregression degrades.
         </p>
     </div>
     """, unsafe_allow_html=True)

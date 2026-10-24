@@ -2,7 +2,7 @@
 CarbonLens: AI-based Carbon Emission Analysis and Forecasting
 Main entry point for Streamlit Dashboard Prototype.
 
-Demonstrates Phase 1 (Data and Baselines) for B.Tech Final Year Project.
+B.Tech Final Year Major Project Dashboard.
 Supervisor: Ms. Saloni Ahuja | BBDITM Lucknow
 Team: Rajat Singh, Pradhyumna Sharma, Pranav Kumar Singh
 """
@@ -33,7 +33,7 @@ pages = [
     st.Page("pages/6_Baseline_Models.py", title="6. Baseline Models", icon="🤖"),
     st.Page("pages/7_Forecast_Viewer.py", title="7. Forecast Viewer", icon="📈"),
     st.Page("pages/8_NDC_Gap_Preview.py", title="8. NDC Gap Preview", icon="🎯"),
-    st.Page("pages/9_Roadmap.py", title="9. Roadmap & Team", icon="🗺️"),
+    st.Page("pages/9_Roadmap.py", title="9. Future Scope & Team", icon="👥"),
 ]
 
 # Initialize navigation
@@ -66,7 +66,7 @@ with st.sidebar:
     st.info(f"**Data Source**: {mode_badge}\n\n*Change in `config.py`*")
     
     st.markdown("---")
-    st.markdown("**B.Tech Project — Phase 1**")
+    st.markdown("**B.Tech Major Project**")
     st.caption(f"**Supervisor**: {config.SUPERVISOR}\n\n**Institution**: {config.INSTITUTION}")
     
     st.markdown("---")

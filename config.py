@@ -29,7 +29,7 @@ PREDICTIONS_FILE = DATA_DIR / "predictions.csv"
 # ==============================================================================
 PROJECT_TITLE = "CarbonLens"
 PROJECT_FULL_TITLE = "CarbonLens: AI-based Carbon Emission Analysis and Forecasting"
-PROJECT_SUBTITLE = "B.Tech Final Year Project — Phase 1 Demonstration"
+PROJECT_SUBTITLE = "B.Tech Final Year Project — AI Analysis & Forecasting"
 INSTITUTION = "Babu Banarasi Das Institute of Technology and Management (BBDITM), Lucknow"
 SUPERVISOR = "Ms. Saloni Ahuja"
 
@@ -37,19 +37,19 @@ TEAM_MEMBERS = [
     {
         "name": "Rajat Singh",
         "role": "Models and Evaluation",
-        "responsibilities": "Statistical baselines (ARIMA/SARIMA), ML models (SVR, RF, Boosting), cross-validation, and metrics bench.",
+        "responsibilities": "Statistical baselines (ARIMA/SARIMA), ML models (SVR, RF, Boosting), cross-validation, and metrics benchmark.",
         "avatar": "🤖"
     },
     {
         "name": "Pranav Kumar Singh",
         "role": "Data Pipeline, SHAP, NDC & Dashboard",
-        "responsibilities": "Multi-scale data ingestion, Streamlit dashboard architecture, NDC gap calculator, and Phase 2 SHAP framework.",
+        "responsibilities": "Multi-scale data ingestion, Streamlit dashboard architecture, NDC gap calculator, and model explainability (SHAP).",
         "avatar": "💻"
     },
     {
         "name": "Pradhyumna Sharma",
         "role": "Data Collection, Results, Testing & Documentation",
-        "responsibilities": "Historical indicator curation, stationarity & Granger causality tests, QA validation, and project reports.",
+        "responsibilities": "Historical indicator curation, stationarity & Granger causality tests, QA validation, and technical documentation.",
         "avatar": "📋"
     }
 ]

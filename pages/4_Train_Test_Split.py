@@ -46,7 +46,7 @@ st.markdown(f"""
         </h3>
     </div>
     <p style="margin: 0 0 12px 0; font-size: 13.5px; color: {box_text_color}; line-height: 1.55;">
-        To ensure total scientific integrity for Phase 1 and future Phase 2 deep learning models, our pipeline enforces four strict barriers:
+        To ensure total scientific integrity for our forecasting framework, the pipeline enforces four strict barriers:
     </p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
         <div style="background: {card_bg}; border: 1px solid {card_border}; padding: 12px 14px; border-radius: 6px;">
@@ -176,7 +176,7 @@ with col_tbl2:
 st.markdown('<div class="section-header">🔄 Expanding-Window Walk-Forward Validation Setup</div>', unsafe_allow_html=True)
 
 st.markdown("""
-Unlike static train/test splits, Phase 1 baselines utilize **Expanding Window (Walk-Forward) Cross-Validation**:
+Unlike static train/test splits, CarbonLens models utilize **Expanding Window (Walk-Forward) Cross-Validation**:
 - **Fold 1:** Train [2019–2021] &rarr; Validate [2022]
 - **Fold 2:** Train [2019–2022] &rarr; Validate [2023]
 - **Final Evaluation:** Train [2019–2023] &rarr; Evaluate Test [2024–2025]

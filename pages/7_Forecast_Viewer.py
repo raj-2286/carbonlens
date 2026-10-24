@@ -147,7 +147,7 @@ st.plotly_chart(fig_forecast, use_container_width=True)
 render_chart_caption(
     f"Out-of-sample forecast for {selected_region}. The bold black curve represents the ground-truth observed emissions. "
     "Notice how XGBoost (green) and the Voting ensemble (blue) closely match weekend troughs and seasonal peaks, "
-    "whereas classical statistical models (dashed grey) suffer from minor phase lag and underpredict peak volatility."
+    "whereas classical statistical models (dashed grey) suffer from minor cyclical time lag and underpredict peak volatility."
 )
 
 # ==============================================================================

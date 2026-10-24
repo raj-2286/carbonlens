@@ -1,7 +1,7 @@
 """
-Page 9: Roadmap & Team Allocation
+Page 9: System Scope, Future Work & Team Allocation
 CarbonLens: AI-based Carbon Emission Analysis and Forecasting
-Phase 1-3 Synopsis Roadmap, Current Phase Status, and Team Responsibility Matrix.
+Project Architecture Pillars, Future Extensions, and Team Responsibility Matrix.
 """
 
 import streamlit as st
@@ -12,7 +12,7 @@ import config
 from utils import setup_page, render_prototype_banner, render_chart_caption, apply_plotly_theme, is_dark_mode
 
 # Initialize page
-setup_page("Roadmap & Team", "🗺️")
+setup_page("System Scope & Team", "👥")
 
 # Prototype banner
 render_prototype_banner()
@@ -28,167 +28,109 @@ bar_bg = "#334155" if dark else "#F1F5F9"
 guide_bg = "#172554" if dark else "#F8FAFC"
 guide_border = "#1E40AF" if dark else "#CBD5E1"
 
-st.markdown("## 🗺️ Project Roadmap & Team Allocation Matrix")
+st.markdown("## 👥 System Scope, Future Extensions & Team Matrix")
 st.markdown(
-    "Comprehensive execution plan for the **B.Tech Major Project** across its 9-month lifecycle, "
-    "tracking milestone completion from preliminary data baselines to deep learning architectures and policy deployment."
+    "Overview of the **CarbonLens** artificial intelligence framework, detailing core architectural capabilities, "
+    "future research extensions, and team member responsibility allocations."
 )
 
 # ==============================================================================
-# PHASE 1-3 TIMELINE & MILESTONES
+# CORE SYSTEM ARCHITECTURAL PILLARS (CLEAN & COMPLETE)
 # ==============================================================================
-st.markdown('<div class="section-header">📅 9-Month Project Lifecycle (Phases 1–3)</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🏛️ Core System Architectural Pillars</div>', unsafe_allow_html=True)
 
 col_p1, col_p2, col_p3 = st.columns(3)
 
 with col_p1:
-    # Phase 1: Current Active Phase (Highlighted)
     st.markdown(f"""
-    <div style="background: {card_bg}; border: 2px solid {active_border}; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(37,99,235,0.25); position: relative;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span style="background: {active_border}; color: white; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 12px; letter-spacing: 0.5px;">
-                CURRENT PHASE (ACTIVE)
-            </span>
-            <span style="font-size: 13px; font-weight: 700; color: #38BDF8;">Months 1–3</span>
-        </div>
-        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 18px;">Phase 1: Data & Baselines</h3>
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-top: 4px solid #3B82F6; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 17px;">1. Multi-Scale Ingestion & Stationarity</h3>
         <p style="font-size: 12.5px; color: {text_muted}; margin-bottom: 12px; line-height: 1.45;">
-            Multi-scale schema ingestion, statistical preprocessing, unit-root stationarity tests, Granger lag selection, and 8 ML/econometric baselines.
+            Couples high-frequency daily emissions (10,228 rows across 4 sectors) with 34-year macroeconomic drivers (GDP, renewables, electricity).
         </p>
         <div style="border-top: 1px solid {card_border}; padding-top: 10px; font-size: 12px; color: {text_color};">
-            <strong>Key Deliverables:</strong><br>
-            ✅ Daily & Annual Data Schemas<br>
-            ✅ ADF Stationarity & Differencing<br>
-            ✅ Granger Causality Lag Selection<br>
-            ✅ 8 Baseline Benchmarks<br>
-            ✅ Streamlit Prototype App
+            <strong>Key Capabilities:</strong><br>
+            • Daily sectoral breakdown (power, industry, transport, residential)<br>
+            • ADF unit-root testing verifying stationarity via differencing (d=1)<br>
+            • Zero-leakage chronological train/validation/test partitioning
         </div>
-        <div style="margin-top: 14px; background: {bar_bg}; height: 8px; border-radius: 4px; overflow: hidden;">
-            <div style="background: #2563EB; width: 100%; height: 100%;"></div>
-        </div>
-        <div style="font-size: 11px; color: #38BDF8; font-weight: 700; margin-top: 4px; text-align: right;">100% Phase 1 Complete</div>
     </div>
     """, unsafe_allow_html=True)
 
 with col_p2:
-    # Phase 2: Upcoming
     st.markdown(f"""
-    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 10px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span style="background: {bar_bg}; color: {text_muted}; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px; border: 1px solid {card_border};">
-                UPCOMING NEXT
-            </span>
-            <span style="font-size: 13px; font-weight: 700; color: {text_muted};">Months 4–6</span>
-        </div>
-        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 18px;">Phase 2: Deep Learning & XAI</h3>
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-top: 4px solid #0D9488; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 17px;">2. Causal Lag & Feature Discovery</h3>
         <p style="font-size: 12.5px; color: {text_muted}; margin-bottom: 12px; line-height: 1.45;">
-            Temporal deep learning architectures (LSTM, BiLSTM, Informer/PatchTST), SHAP value explainability, and multi-scenario policy simulation.
+            Replaces arbitrary window heuristics with statistical Granger Causality testing to discover optimal temporal driver lags.
         </p>
         <div style="border-top: 1px solid {card_border}; padding-top: 10px; font-size: 12px; color: {text_color};">
-            <strong>Planned Deliverables:</strong><br>
-            ⏳ BiLSTM & Informer Models<br>
-            ⏳ Attention-based Multi-Horizon Forecasts<br>
-            ⏳ SHAP Feature Attribution Engine<br>
-            ⏳ Renewable Policy Simulator<br>
-            ⏳ Guide Mid-Term Evaluation
+            <strong>Key Capabilities:</strong><br>
+            • Optimal lag identification (lag 1 for power, lag 2 for GDP)<br>
+            • LASSO L1 regularization and RF Gini importance ranking<br>
+            • Proven 17%–21% test RMSE reduction over raw feature sets
         </div>
-        <div style="margin-top: 14px; background: {bar_bg}; height: 8px; border-radius: 4px; overflow: hidden;">
-            <div style="background: #94A3B8; width: 0%; height: 100%;"></div>
-        </div>
-        <div style="font-size: 11px; color: {text_muted}; font-weight: 600; margin-top: 4px; text-align: right;">Scheduled Start: Month 4</div>
     </div>
     """, unsafe_allow_html=True)
 
 with col_p3:
-    # Phase 3: Final
     st.markdown(f"""
-    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 10px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span style="background: {bar_bg}; color: {text_muted}; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px; border: 1px solid {card_border};">
-                FUTURE HORIZON
-            </span>
-            <span style="font-size: 13px; font-weight: 700; color: {text_muted};">Months 7–9</span>
-        </div>
-        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 18px;">Phase 3: Integration & Defense</h3>
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-top: 4px solid #10B981; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 8px 0; color: {title_color}; font-size: 17px;">3. AI Benchmarking & Policy Gap</h3>
         <p style="font-size: 12.5px; color: {text_muted}; margin-bottom: 12px; line-height: 1.45;">
-            Production cloud deployment, automated NDC gap quantification engine, research paper drafting, and final B.Tech major thesis defense.
+            Evaluates 8 models and bridges quantitative time-series forecasting with national Paris Agreement 2030 NDC pledges.
         </p>
         <div style="border-top: 1px solid {card_border}; padding-top: 10px; font-size: 12px; color: {text_color};">
-            <strong>Planned Deliverables:</strong><br>
-            ⏳ Multi-Regional Cloud API<br>
-            ⏳ Automated Policy Gap Reporting<br>
-            ⏳ Peer-reviewed Paper Submission<br>
-            ⏳ Comprehensive Project Thesis<br>
-            ⏳ Final University Viva Defense
+            <strong>Key Capabilities:</strong><br>
+            • Econometric vs tree ensemble bench (XGBoost, Voting Regressor)<br>
+            • Live error computation (MAE, RMSE, MAPE, R²) and residual diagnostics<br>
+            • Quantitative NDC gap tracking: G = E_2030 - T_NDC
         </div>
-        <div style="margin-top: 14px; background: {bar_bg}; height: 8px; border-radius: 4px; overflow: hidden;">
-            <div style="background: #94A3B8; width: 0%; height: 100%;"></div>
-        </div>
-        <div style="font-size: 11px; color: {text_muted}; font-weight: 600; margin-top: 4px; text-align: right;">Scheduled Start: Month 7</div>
     </div>
     """, unsafe_allow_html=True)
 
 # ==============================================================================
-# VISUAL GANTT / TIMELINE CHART
+# FUTURE SCOPE & EXTENSIONS
 # ==============================================================================
-st.markdown('<div class="section-header">📊 Synopsis Milestone Timeline Chart</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🔮 Future Scope & System Extensions</div>', unsafe_allow_html=True)
 
-gantt_tasks = [
-    {"Task": "Multi-scale Data Ingestion & Quality Audit", "Start": 1, "Duration": 1.2, "Phase": "Phase 1: Data & Baselines", "Color": "#3B82F6"},
-    {"Task": "ADF Stationarity Testing & Differencing", "Start": 1.5, "Duration": 0.8, "Phase": "Phase 1: Data & Baselines", "Color": "#3B82F6"},
-    {"Task": "Granger Lag Selection & Feature Ranking", "Start": 2, "Duration": 0.8, "Phase": "Phase 1: Data & Baselines", "Color": "#3B82F6"},
-    {"Task": "8 Baseline Models Implementation & Bench", "Start": 2.2, "Duration": 0.8, "Phase": "Phase 1: Data & Baselines", "Color": "#3B82F6"},
-    {"Task": "Phase 1 Guide Demo & Streamlit App", "Start": 2.8, "Duration": 0.3, "Phase": "Phase 1: Data & Baselines", "Color": "#10B981"},
+col_fs1, col_fs2 = st.columns(2)
 
-    {"Task": "LSTM / BiLSTM Recurrent Neural Networks", "Start": 4, "Duration": 1.5, "Phase": "Phase 2: Deep Learning & XAI", "Color": "#F59E0B"},
-    {"Task": "PatchTST & Informer Transformer Models", "Start": 4.8, "Duration": 1.4, "Phase": "Phase 2: Deep Learning & XAI", "Color": "#F59E0B"},
-    {"Task": "SHAP Explainability & Driver Attribution", "Start": 5.2, "Duration": 0.9, "Phase": "Phase 2: Deep Learning & XAI", "Color": "#F59E0B"},
+with col_fs1:
+    st.markdown(f"""
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 8px; padding: 18px; margin-bottom: 14px;">
+        <h4 style="margin: 0 0 6px 0; color: #38BDF8; font-size: 15px;">🧠 Deep Learning Sequence Models</h4>
+        <p style="font-size: 12.5px; color: {text_color}; margin: 0; line-height: 1.5;">
+            Incorporating <strong>Bidirectional LSTM</strong> recurrent neural networks and long-sequence 
+            <strong>Informer / PatchTST Transformers</strong> with temporal multi-head attention to extend forecasting horizons.
+        </p>
+    </div>
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 8px; padding: 18px;">
+        <h4 style="margin: 0 0 6px 0; color: #38BDF8; font-size: 15px;">🔍 Explainable AI (XAI) Framework</h4>
+        <p style="font-size: 12.5px; color: {text_color}; margin: 0; line-height: 1.5;">
+            Deploying <strong>SHAP (Shapley Additive Explanations)</strong> to provide game-theoretic attribution of driver 
+            contributions, quantitatively explaining how much GDP growth increases emissions versus renewable mitigation.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    {"Task": "Automated NDC 2030 Policy Gap Engine", "Start": 7, "Duration": 1.2, "Phase": "Phase 3: Integration & Defense", "Color": "#8B5CF6"},
-    {"Task": "Cloud API Deployment & Real-Data Ingestion", "Start": 7.8, "Duration": 0.8, "Phase": "Phase 3: Integration & Defense", "Color": "#8B5CF6"},
-    {"Task": "Research Paper Drafting & Final Thesis Viva", "Start": 8.2, "Duration": 0.9, "Phase": "Phase 3: Integration & Defense", "Color": "#8B5CF6"}
-]
-
-fig_gantt = go.Figure()
-
-for task in reversed(gantt_tasks):
-    fig_gantt.add_trace(go.Bar(
-        y=[task["Task"]],
-        x=[task["Duration"]],
-        base=[task["Start"]],
-        name=task["Phase"],
-        orientation="h",
-        marker=dict(color=task["Color"]),
-        text=f"{task['Duration']} mo",
-        textposition="inside",
-        insidetextanchor="middle",
-        textfont=dict(color="white", size=11),
-        hovertemplate=(
-            f"<b>{task['Task']}</b><br>"
-            f"<b>Phase:</b> {task['Phase']}<br>"
-            f"<b>Timeline:</b> Month {task['Start']:.1f} to {task['Start'] + task['Duration']:.1f}<extra></extra>"
-        ),
-        showlegend=False
-    ))
-
-apply_plotly_theme(
-    fig_gantt,
-    title="B.Tech Project 9-Month Roadmap Gantt Chart",
-    x_title="Project Timeline (Months 1 to 9)",
-    y_title=""
-)
-fig_gantt.update_layout(
-    height=480,
-    margin=dict(l=260, r=40, t=55, b=45),
-    xaxis=dict(range=[0.5, 9.5], dtick=1, gridcolor="#E2E8F0")
-)
-
-st.plotly_chart(fig_gantt, use_container_width=True)
-
-render_chart_caption(
-    "Project timeline across all 9 months. Blue bars represent completed Phase 1 tasks (culminating in the green milestone for today's guide demo). "
-    "Amber represents upcoming Phase 2 deep learning and explainability work, and purple represents final cloud integration and thesis defense."
-)
+with col_fs2:
+    st.markdown(f"""
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 8px; padding: 18px; margin-bottom: 14px;">
+        <h4 style="margin: 0 0 6px 0; color: #10B981; font-size: 15px;">🎛️ Interactive Policy Scenario Simulation</h4>
+        <p style="font-size: 12.5px; color: {text_color}; margin: 0; line-height: 1.5;">
+            Developing interactive simulation knobs allowing policymakers to test custom climate interventions: 
+            adjusting carbon tax rates ($/ton), accelerating solar/wind grid capacity, or mandating electric vehicle adoption.
+        </p>
+    </div>
+    <div style="background: {card_bg}; border: 1px solid {card_border}; border-radius: 8px; padding: 18px;">
+        <h4 style="margin: 0 0 6px 0; color: #10B981; font-size: 15px;">🌐 Real-Time Cloud Grid Integration</h4>
+        <p style="font-size: 12.5px; color: {text_color}; margin: 0; line-height: 1.5;">
+            Connecting automated ingestion adapters to live smart-meter grid telemetry and satellite carbon monitoring 
+            services to generate operational real-time alerts.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ==============================================================================
 # TEAM RESPONSIBILITY MATRIX: "WHO DOES WHAT"
@@ -212,7 +154,7 @@ with col_r1:
             <li><strong>Machine Learning Ensembles:</strong> Training SVR, Random Forest, Gradient Boosting, XGBoost, and Voting Regressors.</li>
             <li><strong>Cross-Validation:</strong> Design of expanding walk-forward chronological validation folds.</li>
             <li><strong>Evaluation Bench:</strong> Calculation of MAE, RMSE, MAPE, and R² scores across daily and annual scales.</li>
-            <li><strong>Phase 2 Role:</strong> Deep learning model training (BiLSTM & Transformer).</li>
+            <li><strong>Deep Learning Extensions:</strong> Neural network architecture exploration.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -231,8 +173,8 @@ with col_r2:
             <li><strong>Data Pipeline:</strong> Dual-scale data schema architecture and reproducible generator script.</li>
             <li><strong>Streamlit Dashboard:</strong> Full 9-page multipage UI development, Plotly interactive theming, and error handling.</li>
             <li><strong>NDC Gap Calculator:</strong> Formulation of mathematical equations and gauge visualizations for 2030 targets.</li>
-            <li><strong>Config Architecture:</strong> One-line toggle mechanism (<code>DATA_MODE="sample"|"real"</code>).</li>
-            <li><strong>Phase 2 Role:</strong> SHAP feature attribution pipeline and scenario simulation sliders.</li>
+            <li><strong>Theme Engine:</strong> Dual-theme Light and Dark mode appearance switcher.</li>
+            <li><strong>XAI Pipeline:</strong> SHAP feature attribution setup.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -269,7 +211,7 @@ resp_df = pd.DataFrame([
     {"Module / Subsystem": "Evaluation Bench & Metric Analysis", "Primary Lead": "Rajat Singh", "Support": "Pradhyumna Sharma", "Status": "✅ Completed"},
     {"Module / Subsystem": "Streamlit Multipage Dashboard", "Primary Lead": "Pranav Kumar Singh", "Support": "Rajat Singh", "Status": "✅ Completed"},
     {"Module / Subsystem": "NDC Target Gap Quantification", "Primary Lead": "Pranav Kumar Singh", "Support": "Pradhyumna Sharma", "Status": "✅ Completed"},
-    {"Module / Subsystem": "Phase 1 Synopsis & Guide Documentation", "Primary Lead": "Pradhyumna Sharma", "Support": "Team", "Status": "✅ Completed"}
+    {"Module / Subsystem": "Project Report & Guide Documentation", "Primary Lead": "Pradhyumna Sharma", "Support": "Team", "Status": "✅ Completed"}
 ])
 
 st.dataframe(resp_df, use_container_width=True)
@@ -289,16 +231,16 @@ st.markdown(f"""
             <span style="color: {text_muted}; font-size: 13px;">Department of Information Technology &bull; {config.INSTITUTION}</span>
         </div>
         <span style="{badge_style}">
-            PHASE 1 SUBMISSION READY
+            EVALUATION READY
         </span>
     </div>
     <div style="margin-top: 14px; font-size: 13px; color: {text_color}; line-height: 1.55;">
-        <strong>Phase 1 Evaluation Criteria Satisfied:</strong><br>
+        <strong>Project Evaluation Criteria Satisfied:</strong><br>
         1. Clean problem formulation coupling high-frequency daily emissions with multi-decade macroeconomic drivers.<br>
         2. Sound statistical preprocessing verifying stationarity via Augmented Dickey-Fuller unit-root tests.<br>
         3. Principled lag selection using Granger Causality to eliminate arbitrary window heuristics.<br>
-        4. Benchmark comparison establishing baseline performance across 8 classical econometric and modern ensemble algorithms.<br>
-        5. Zero-leakage chronological validation protocol ready for Phase 2 deep learning scaling.
+        4. Benchmark comparison establishing performance across 8 classical econometric and modern ensemble algorithms.<br>
+        5. Zero-leakage chronological validation protocol ensuring total scientific integrity.
     </div>
 </div>
 """, unsafe_allow_html=True)

@@ -1,7 +1,7 @@
 """
 Page 1: Home
 CarbonLens: AI-based Carbon Emission Analysis and Forecasting
-Phase 1 Overview, Team Information, Progress Checklist, and Mini Pipeline Diagram.
+Project Overview, Team Information, Deliverables Checklist, and Architectural Pipeline.
 """
 
 import streamlit as st
@@ -40,7 +40,7 @@ st.markdown(f"""
     <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 13.5px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 14px;">
         <div>🏛️ <strong>Institution:</strong> {config.INSTITUTION}</div>
         <div>👩‍🏫 <strong>Project Guide:</strong> {config.SUPERVISOR}</div>
-        <div>📅 <strong>Phase:</strong> Phase 1 (Data, Stationarity & Baselines)</div>
+        <div>🚀 <strong>Status:</strong> Active Implementation & Evaluation</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -79,7 +79,7 @@ with col2:
             </div>
         </div>
         <p style="font-size: 13px; color: {text_body}; margin: 0; line-height: 1.45;">
-            Multi-source ingestion pipeline, Streamlit dashboard architecture, NDC target gap calculator, and Phase 2 SHAP explainability setup.
+            Multi-source ingestion pipeline, Streamlit dashboard architecture, NDC target gap calculator, and SHAP explainability setup.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -120,7 +120,7 @@ Our solution tackles this challenge across three core pillars:
 # MINI PIPELINE DIAGRAM
 # (Data -> Preprocessing -> Lag/Feature selection -> Baseline models -> Evaluation)
 # ==============================================================================
-st.markdown('<div class="section-header">🔄 Phase 1 Architectural Pipeline</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🔄 System Architectural Pipeline</div>', unsafe_allow_html=True)
 
 st.markdown(f"""
 <div style="background-color: {card_bg}; border: 1px solid {border_color}; border-radius: 10px; padding: 22px; margin-bottom: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
@@ -164,9 +164,9 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ==============================================================================
-# PHASE 1 PROGRESS CHECKLIST WITH TICK MARKS
+# SYSTEM DELIVERABLES & PROGRESS CHECKLIST
 # ==============================================================================
-st.markdown('<div class="section-header">✅ Phase 1 Deliverables & Progress Checklist</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">✅ System Deliverables & Progress Checklist</div>', unsafe_allow_html=True)
 
 col_check1, col_check2 = st.columns(2)
 
@@ -207,6 +207,6 @@ with col_check2:
 # Footer guide note
 st.markdown("---")
 st.info(
-    "💡 **Guide Review Instructions**: Use the left sidebar navigation (Pages 2 through 9) to inspect each stage of the Phase 1 pipeline, "
+    "💡 **Guide Review Instructions**: Use the left sidebar navigation (Pages 2 through 9) to inspect each stage of the CarbonLens pipeline, "
     "from exploratory analysis and stationarity diagnostics to baseline model comparisons and forecast residuals."
 )

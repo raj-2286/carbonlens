@@ -1,6 +1,6 @@
 """
 Synthetic Data Generator for CarbonLens Prototype.
-Generates realistic prototype datasets for Phase 1 demonstration.
+Generates realistic prototype datasets for CarbonLens demonstration.
 Saved to data/sample/ with random seed 42 for complete reproducibility.
 
 All datasets are synthetic and strictly intended for prototype demonstration.
@@ -358,7 +358,7 @@ def generate_annual_indicators():
 
 def generate_ndc_targets():
     """
-    Generate NDC targets for 2030 (placeholder target values for Phase 1 demo).
+    Generate NDC targets for 2030 (placeholder target values for demonstration).
     Columns: country, target_year, target_emission, description
     """
     print("-> Generating ndc_targets.csv...")
@@ -655,7 +655,7 @@ def generate_predictions(df_daily):
     Columns: date, region, actual, ARIMA, SARIMA, SVR, Random_Forest,
              Gradient_Boosting, XGBoost, Voting, Bagging
     Produces model-specific behaviors:
-    - ARIMA: smoother, minor phase lag on weekly peaks
+    - ARIMA: smoother, minor cyclical lag on weekly peaks
     - SARIMA: captures weekly cycle well, struggles with extreme spikes
     - SVR: smooth non-linear fit
     - Tree models (RF, GB, XGBoost): accurate capture of sharp weekend drops

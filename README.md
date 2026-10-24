@@ -1,6 +1,6 @@
 # 🌍 CarbonLens: AI-based Carbon Emission Analysis and Forecasting
 
-> **B.Tech Final Year Project — Phase 1 Demonstration (Data, Preprocessing & Baselines)**  
+> **B.Tech Final Year Project — CarbonLens AI Forecasting Framework**  
 > **Supervisor:** Ms. Saloni Ahuja (Assistant Professor)  
 > **Institution:** Babu Banarasi Das Institute of Technology and Management (BBDITM), Lucknow  
 > **Team:**  
@@ -12,9 +12,9 @@
 
 ## 📌 Project Overview
 
-**CarbonLens** is an end-to-end artificial intelligence framework designed to overcome the 1–2 year reporting lag in conventional greenhouse gas emissions accounting. Phase 1 demonstrates multi-scale temporal modeling (coupling high-frequency daily emissions with annual macroeconomic drivers), rigorous statistical preprocessing (stationarity testing and Granger lag selection), baseline forecasting model benchmarking across 8 algorithms, and preliminary Paris Agreement NDC target gap quantification.
+**CarbonLens** is an end-to-end artificial intelligence framework designed to overcome the 1–2 year reporting lag in conventional greenhouse gas emissions accounting. The platform demonstrates multi-scale temporal modeling (coupling high-frequency daily emissions with annual macroeconomic drivers), rigorous statistical preprocessing (stationarity testing and Granger lag selection), baseline forecasting model benchmarking across 8 algorithms, and Paris Agreement NDC target gap quantification.
 
-> ⚠️ **IMPORTANT NOTICE:** Prototype sample datasets are currently active for Phase 1 academic demonstration (`DATA_MODE = "sample"` in `config.py`). A prominent banner appears on every dashboard page indicating that sample data is used for demonstration rather than real results.
+> ⚠️ **IMPORTANT NOTICE:** Prototype sample datasets are currently active for academic demonstration (`DATA_MODE = "sample"` in `config.py`). A prominent banner appears on every dashboard page indicating that sample data is used for demonstration rather than real results.
 
 ---
 
@@ -93,7 +93,7 @@ g:\carbon emission\
 │   ├── 6_Baseline_Models.py    # 8-model benchmark comparison, best model callout & training time
 │   ├── 7_Forecast_Viewer.py    # Actual vs predicted multi-model curves and residual analysis
 │   ├── 8_NDC_Gap_Preview.py    # 2030 NDC gap quantification (G = E_2030 - T_NDC) and gauge chart
-│   └── 9_Roadmap.py            # 9-month synopsis roadmap & team responsibility matrix
+│   └── 9_Roadmap.py            # Architecture pillars, future scope & team responsibility matrix
 └── data/
     ├── sample/                 # Generated prototype datasets (active)
     └── real/                   # Directory reserved for real-world datasets
@@ -109,7 +109,7 @@ To verify all features for your project guide demonstration:
    - Check the prominent prototype warning banner at top.
    - Verify project metadata: Title, Guide (*Ms. Saloni Ahuja*), Institution (*BBDITM Lucknow*).
    - Inspect team role cards (*Rajat, Pranav, Pradhyumna*).
-   - Review the Phase 1 Progress Checklist (all tick marks active).
+   - Review the System Deliverables & Implementation Checklist (all tick marks active).
    - Inspect the 5-step visual pipeline diagram (*Data &rarr; Preprocessing &rarr; Lag/Features &rarr; Baselines &rarr; Evaluation*).
 
 2. **Page 2 (Data Explorer)**:
@@ -147,12 +147,12 @@ To verify all features for your project guide demonstration:
    - Inspect the residual error series and the residual bell-curve distribution.
 
 8. **Page 8 (NDC Gap Preview)**:
-   - Note the prominent "Preview: full scenario analysis comes in Phase 2" label.
+   - Note the prominent Policy Simulation & Target Analysis Framework banner.
    - Select a country (*India, China, USA, etc.*).
    - Observe the gap calculation: $G = E_{2030} - T_{\text{NDC}}$ in absolute ($MtCO_2$) and percentage terms.
    - Inspect the interactive gauge and milestone comparison bars.
 
-9. **Page 9 (Roadmap & Team)**:
-   - Review the 9-month synopsis roadmap: verify Phase 1 is highlighted with the "CURRENT PHASE (ACTIVE)" badge.
-   - Inspect the Gantt chart showing task durations across months 1–9.
+9. **Page 9 (Future Scope & Team)**:
+   - Review the Core Architectural Pillars (Multi-scale Ingestion, Causal Lag Selection, AI Benchmarking & Policy Gap).
+   - Inspect Future Scope & System Extensions (Deep Learning Informer/Transformers, SHAP XAI, Policy knobs).
    - Review the detailed team allocation table confirming responsibilities for Rajat, Pranav, and Pradhyumna.
