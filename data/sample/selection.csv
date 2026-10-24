@@ -1,0 +1,32 @@
+category,entity,driver_or_feature,optimal_lag,stat_or_score,p_value,metric_all,metric_selected,improvement_pct,notes
+granger_lag,Global / Multi-country,Electric Power Consumption (kWh/capita),1 year,18.42,0.0002,,,,Confirmed (X -> CO2)
+granger_lag,Global / Multi-country,Industrial Value Added (Billion USD),1 year,14.85,0.0006,,,,Confirmed (X -> CO2)
+granger_lag,Global / Multi-country,GDP (Billion USD),2 years,11.34,0.0018,,,,Confirmed (X -> CO2)
+granger_lag,Global / Multi-country,Renewable Share (%),2 years,9.76,0.0041,,,,Confirmed (Negative X -> CO2)
+granger_lag,Global / Multi-country,Population (Million),3 years,4.12,0.048,,,,Moderate (Long-term drift)
+granger_lag,Global / Multi-country,Daily Power Sector Lag (Daily),7 days,42.15,0.0,,,,Confirmed (Weekly cycle)
+granger_lag,Global / Multi-country,Daily Transport Sector Lag (Daily),1 day,31.8,0.0,,,,Confirmed (Immediate)
+selected_features,China,Industrial Value Added (t-1),Optimal,0.38,,,,,Top driver of production emissions
+selected_features,China,Electric Power Consumption (t-1),Optimal,0.31,,,,,Heavy coal grid dependence
+selected_features,China,GDP (t-2),Optimal,0.18,,,,,Macro demand signal
+selected_features,China,Renewable Share (t-2),Optimal,0.13,,,,,Mitigating factor post-2015
+selected_features,United States,Electric Power Consumption (t-1),Optimal,0.35,,,,,Grid electricity & cooling
+selected_features,United States,GDP (t-1),Optimal,0.26,,,,,Service & consumer consumption
+selected_features,United States,Renewable Share (t-1),Optimal,0.24,,,,,Coal-to-gas & renewables shift
+selected_features,United States,Industrial Value Added (t-2),Optimal,0.15,,,,,Moderate manufacturing weight
+selected_features,India,Electric Power Consumption (t-1),Optimal,0.42,,,,,Rapid electrification & industrial demand
+selected_features,India,GDP (t-2),Optimal,0.28,,,,,Strong economic development proxy
+selected_features,India,Industrial Value Added (t-1),Optimal,0.2,,,,,"Cement, steel, manufacturing"
+selected_features,India,Population (t-3),Optimal,0.1,,,,,Demographic expansion baseline
+selected_features,EU27+UK,Renewable Share (t-1),Optimal,0.39,,,,,Strongest driver of emissions abatement
+selected_features,EU27+UK,GDP (t-1),Optimal,0.24,,,,,Decoupled economic growth
+selected_features,EU27+UK,Industrial Value Added (t-2),Optimal,0.22,,,,,Efficiency gains in heavy sector
+selected_features,EU27+UK,Electric Power Consumption (t-1),Optimal,0.15,,,,,Electrification with cleaner grid
+selection_comparison,China,XGBoost,N/A,,,142.5,118.2,17.1,RMSE in MtCO2/yr. Selection removes multicollinearity.
+selection_comparison,China,Random Forest,N/A,,,158.4,131.0,17.3,RMSE in MtCO2/yr.
+selection_comparison,United States,XGBoost,N/A,,,98.4,82.1,16.6,RMSE in MtCO2/yr.
+selection_comparison,United States,Random Forest,N/A,,,108.2,91.5,15.4,RMSE in MtCO2/yr.
+selection_comparison,India,XGBoost,N/A,,,62.8,49.3,21.5,RMSE in MtCO2/yr. Strong noise suppression.
+selection_comparison,India,Random Forest,N/A,,,69.1,55.4,19.8,RMSE in MtCO2/yr.
+selection_comparison,EU27+UK,XGBoost,N/A,,,54.2,44.8,17.3,RMSE in MtCO2/yr.
+selection_comparison,EU27+UK,Random Forest,N/A,,,59.5,49.6,16.6,RMSE in MtCO2/yr.

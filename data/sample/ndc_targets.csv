@@ -1,0 +1,13 @@
+country,target_year,target_emission,description
+China,2030,11200.0,Placeholder: Peak CO2 emissions before 2030 & 65% carbon intensity reduction
+United States,2030,3150.0,Placeholder: 50-52% net GHG emissions reduction below 2005 levels
+India,2030,3100.0,Placeholder: 45% emissions intensity reduction below 2005 levels & 500 GW non-fossil capacity
+EU27+UK,2030,2150.0,Placeholder: Fit for 55 commitment (at least 55% net GHG reduction vs 1990)
+Russia,2030,1650.0,Placeholder: Limit GHG emissions to max 70% of 1990 baseline
+Japan,2030,750.0,Placeholder: 46% emissions reduction below 2013 fiscal year levels
+Germany,2030,440.0,Placeholder: Federal Climate Action Act target (65% reduction vs 1990)
+Iran,2030,820.0,Placeholder: Unconditional 4% GHG reduction relative to business-as-usual
+South Korea,2030,430.0,Placeholder: Enhanced NDC target of 40% reduction below 2018 peak
+Saudi Arabia,2030,620.0,Placeholder: Circular Carbon Economy NDC reduction of 278 MtCO2eq/year
+Indonesia,2030,980.0,Placeholder: Unconditional 31.89% reduction vs baseline projection
+Canada,2030,440.0,Placeholder: 40-45% reduction below 2005 levels
